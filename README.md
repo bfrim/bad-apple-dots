@@ -1,7 +1,9 @@
-# Work in progress (!)
+# Bad Apple animation, made using a dot grid in Pygame.
 
-![screenshot](ressources/screenshot1.png)
+## Preview:
 
-Idk I'm proud of it
+![screenshot](ressources/anim-preview.gif)
+*(the animation is 10 fps because it's a lot of images lol)
 
-Will try animating it soon
+## Next:
+I wanna make this work in the CLI because that sounds cool.
