@@ -8,6 +8,3 @@
 
 ## Instructions:
 - Just run dots.py
-
-## Next:
-- I wanna make this work in the CLI because that sounds cool.
