@@ -24,5 +24,5 @@ python dots.py
 
 ## Misc.
 
-- This uses a LOT of RAM.
+- This uses a LOT of RAM (~2GB).
 - Next, I wanna make this work in the CLI.
