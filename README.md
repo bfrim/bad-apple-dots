@@ -1,6 +1,6 @@
 Bad Apple animation, made using a dot grid in Pygame. It even has sound!
 
-Next, I wanna make this work on the CLI.
+Next, I wanna make this work in the CLI.
 
 ## Preview:
 
