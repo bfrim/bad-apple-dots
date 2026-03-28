@@ -1,4 +1,4 @@
-Bad Apple animation, made using a dot grid in Pygame.
+Bad Apple animation, made using a dot grid in Pygame. It even has sound!
 
 ## Preview:
 
