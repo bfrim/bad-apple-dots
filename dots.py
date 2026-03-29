@@ -32,9 +32,15 @@ for i in filenames:
 
 curr_frame = 0
 
+FPS = 10
+
 # move music below loop, prevents it from playing prematurely.
 pygame.mixer.music.load("ressources/MUSIC.mp3")
 pygame.mixer.music.play(-1)
+
+# this will make the animation sync with the music even if we drag the window around
+# (this used to be a problem because it would pause the animation until the title bar was let go)
+start_time = pygame.time.get_ticks()
 
 # Game loop
 running = True
@@ -42,7 +48,17 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-            
+
+    # calculate current frame based on elapsed time
+    # (Current Time - Start Time) / (1000ms / FPS)
+    elapsed_time = pygame.time.get_ticks() - start_time
+    curr_frame = int(elapsed_time / (1000 / FPS))
+
+    # kill animation if we run out of frames
+    curr_frame += 1
+    if curr_frame >= len(preloaded_frames):
+        break
+
     window.fill((0, 0, 0))
 
     # old code for a single frame
@@ -66,13 +82,7 @@ while running:
         i += 4
 
     pygame.display.flip()
-
-    # kill animation if we run out of frames
-    curr_frame += 1
-    if curr_frame >= len(preloaded_frames):
-        break
-
-    clock.tick(10)
+    clock.tick(60)
 
 # Quit Pygame
 pygame.quit()
